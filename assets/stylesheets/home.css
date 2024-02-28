@@ -1,0 +1,86 @@
+
+section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)),
+        url('../images/image_home.jpg');
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: azure;
+}
+
+#name {
+    font-size: 90px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+#tagline {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 32px;
+}
+
+.button-div {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.link-btn {
+    width: 160px;
+    height: 64px;
+    font-weight: 300;
+    font-size: 20px;
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+    color: azure;
+    border: 1px solid azure;
+    background-color: transparent;    
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 12px;
+}
+
+.link-btn:hover {
+    background-color: #ffffff1a;
+    color: white;
+    transform: scale(1.2);
+    border: 2px solid white;
+}
+
+.link-btn:active {
+    background-color: #ffffff33;
+    color: white;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.socials {
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-btn {
+    width: 32px;
+}
+
+.social-btn:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
