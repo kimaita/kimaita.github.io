@@ -2,29 +2,39 @@
 <html lang="en" data-bs-theme="dark">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Kimaita</title>
-    <link rel="icon" type="image/svg+xml" src="./assets/icons/k.svg" />
-    <link rel="stylesheet" href="./assets/stylesheets/base.css" />
-    <link rel="stylesheet" href="./assets/stylesheets/home.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
 
+    <link rel="stylesheet" href="./assets/css/output.css" />
+    <style>
+        body {
+            height: 100vh;
+
+        }
+
+        #name {
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        #tagline {
+            font-weight: 600;
+            margin-bottom: 32px;
+        }
+    </style>
 </head>
 
 <body>
-
-    <section>
-        <h1 class="display-text" id="name">John Kimaita</h1>
-        <p class="display-text" id="tagline">Data Engineer | EEE Graduate</p>
+    <section class="section-home">
+        <h1 class="display-text text-5xl md:text-7xl" id="name">John Kimaita</h1>
+        <p class="display-text text-xl" id="tagline">Software Engineer</p>
+        <br />
 
         <div class="button-div">
             <a href="projects.html">
@@ -47,9 +57,7 @@
             <a href="mailto:m.johnkimaita@gmail.com">
                 <img class="social-btn" src="./assets/icons/gmail-light.svg" alt="Email" />
             </a>
-
         </div>
-
     </footer>
 </body>
 
