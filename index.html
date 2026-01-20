@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
-
-<head>
+<html lang="en">
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,56 +8,162 @@
     <title>Kimaita</title>
     <link rel="shortcut icon" href="favicon.ico" />
 
+    <link rel="stylesheet" href="./assets/css/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+
+  <body
+    class="h-dvh w-full overflow-hidden flex flex-col items-center justify-center relative px-4"
+  >
+    <main class="w-full max-w-3xl z-10 fade-in-up">
+      <div
+        class="glass-card p-12 md:p-20 rounded-3xl text-center border-none bg-black/40 backdrop-blur-xl shadow-2xl relative overflow-hidden"
+      >
+        <div
+          class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-32 bg-blue-500/20 blur-[60px] rounded-full pointer-events-none"
+        ></div>
+
+        <h1
+          class="text-5xl md:text-7xl font-bold font-comfortaa text-white mb-6 tracking-tight relative z-10"
+        >
+          John Kimaita
+        </h1>
+
+        <p
+          class="text-lg md:text-xl font-work font-bold mb-12 uppercase tracking-[0.3em] text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-cyan-300 to-blue-300 animate-pulse relative z-10"
+        >
+          Engineer
+        </p>
+
+        <div
+          class="flex flex-col sm:flex-row justify-center gap-6 mb-12 relative z-10"
+        >
+          <a
+            href="projects.html"
+            class="px-10 py-3.5 rounded-full border-2 border-white/30 text-white/90 font-bold tracking-wide transition-all duration-300 hover:border-white hover:bg-white hover:text-black hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.4)]"
+          >
+            Projects
+          </a>
+
+          <a
+            href="about.html"
+            class="px-10 py-3.5 rounded-full border-2 border-white/30 text-white/90 font-bold tracking-wide transition-all duration-300 hover:border-white hover:bg-white hover:text-black hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.4)]"
+          >
+            About Me
+          </a>
+        </div>
+
+        <div
+          class="flex justify-center gap-8 pt-6 border-t border-white/10 relative z-10"
+        >
+          <a
+            href="https://www.github.com/kimaita"
+            target="_blank"
+            class="text-gray-400 hover:text-white transform hover:scale-125 transition duration-300"
+          >
+            <i class="fab fa-github text-2xl"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/john-kimaita-m/"
+            target="_blank"
+            class="text-gray-400 hover:text-blue-400 transform hover:scale-125 transition duration-300"
+          >
+            <i class="fab fa-linkedin text-2xl"></i>
+          </a>
+          <a
+            href="mailto:m.johnkimaita@gmail.com"
+            class="text-gray-400 hover:text-red-400 transform hover:scale-125 transition duration-300"
+          >
+            <i class="fas fa-envelope text-2xl"></i>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer
+      class="absolute bottom-4 text-gray-500 text-xs font-work fade-in-up stagger-2"
+    >
+      &copy;
+      <script>
+        document.write(new Date().getFullYear());
+      </script>
+      Kimaita.
+    </footer>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Kimaita</title>
+    <link rel="shortcut icon" href="favicon.ico" />
 
     <link rel="stylesheet" href="./assets/css/output.css" />
     <style>
-        body {
-            height: 100vh;
+      body {
+        height: 100vh;
+      }
 
-        }
+      #name {
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+      }
 
-        #name {
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 12px;
-        }
-
-        #tagline {
-            font-weight: 600;
-            margin-bottom: 32px;
-        }
+      #tagline {
+        font-weight: 600;
+        margin-bottom: 32px;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <section class="section-home">
-        <h1 class="display-text text-5xl md:text-7xl" id="name">John Kimaita</h1>
-        <p class="display-text text-xl" id="tagline">Software Engineer</p>
-        <br />
+      <h1 class="display-text text-5xl md:text-7xl" id="name">John Kimaita</h1>
+      <p class="display-text text-xl" id="tagline">Software Engineer</p>
+      <br />
 
-        <div class="button-div">
-            <a href="projects.html">
-                <button class="link-btn">Projects</button>
-            </a>
-            <a href="about.html">
-                <button class="link-btn">About Me</button>
-            </a>
-        </div>
+      <div class="button-div">
+        <a href="projects.html">
+          <button class="link-btn">Projects</button>
+        </a>
+        <a href="about.html">
+          <button class="link-btn">About Me</button>
+        </a>
+      </div>
     </section>
 
     <footer>
-        <div class="socials">
-            <a href="https://www.github.com/kimaita">
-                <img class="social-btn" src="./assets/icons/github-light.svg" alt="GitHub" />
-            </a>
-            <a href="https://www.linkedin.com/in/john-kimaita-m/">
-                <img class="social-btn" src="./assets/icons/linkedin-light.svg" alt="LinkedIn" />
-            </a>
-            <a href="mailto:m.johnkimaita@gmail.com">
-                <img class="social-btn" src="./assets/icons/gmail-light.svg" alt="Email" />
-            </a>
-        </div>
+      <div class="socials">
+        <a href="https://www.github.com/kimaita">
+          <img
+            class="social-btn"
+            src="./assets/icons/github-light.svg"
+            alt="GitHub"
+          />
+        </a>
+        <a href="https://www.linkedin.com/in/john-kimaita-m/">
+          <img
+            class="social-btn"
+            src="./assets/icons/linkedin-light.svg"
+            alt="LinkedIn"
+          />
+        </a>
+        <a href="mailto:m.johnkimaita@gmail.com">
+          <img
+            class="social-btn"
+            src="./assets/icons/gmail-light.svg"
+            alt="Email"
+          />
+        </a>
+      </div>
     </footer>
-</body>
-
-</html>
+  </body>
+</html> -->
