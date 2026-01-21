@@ -142,3 +142,100 @@ window.closeLightbox = () => {
     lightboxImg.src = "";
   }, 300);
 };
+
+const interestsData = {
+  manga: {
+    title: "Manga & Anime",
+    icon: "fas fa-book-open",
+    colorClass: "text-purple-400",
+    bgClass: "bg-purple-500/20",
+    items: [
+      "One Piece",
+      "Vagabond",
+      "Jujutsu Kaisen",
+      "Vinland Saga",
+      "Attack on Titan",
+      "Great Teacher Onizuka",
+      "Haikyuu",
+    ],
+  },
+  music: {
+    title: "EDM & Rap",
+    icon: "fas fa-headphones-simple",
+    colorClass: "text-green-400",
+    bgClass: "bg-green-500/20",
+    items: [
+      "Kendrick Lamar",
+      "J. Cole",
+      "Tyler, The Creator",
+      "Zedd",
+      "Fred again..",
+      "Martin Garrix",
+      "Calvin Harris",
+    ],
+  },
+  movies: {
+    title: "Action & Thrillers",
+    icon: "fas fa-film",
+    colorClass: "text-red-400",
+    bgClass: "bg-red-500/20",
+    items: [
+      "Avengers: Infinity War",
+      "The Dark Knight",
+      "Inception",
+      "John Wick",
+      "Spider-Man",
+    ],
+  },
+  tv: {
+    title: "Shows & Series",
+    icon: "fas fa-masks-theater",
+    colorClass: "text-yellow-400",
+    bgClass: "bg-yellow-500/20",
+    items: ["Fleabag", "South Park", "Rick and Morty"],
+  },
+};
+
+const modal = document.getElementById("interest-modal");
+const modalContent = document.getElementById("modal-content");
+
+window.openInterest = (category) => {
+  const data = interestsData[category];
+  if (!data) return;
+
+  document.getElementById("modal-title").innerText = data.title;
+
+  const iconEl = document.getElementById("modal-icon");
+  const iconContainer = document.getElementById("modal-icon-container");
+
+  iconEl.className = `${data.icon} text-3xl ${data.colorClass}`;
+  iconContainer.className = `w-16 h-16 rounded-full mx-auto flex items-center justify-center mb-4 ${data.bgClass}`;
+
+  const listContainer = document.getElementById("modal-list");
+  listContainer.innerHTML = data.items
+    .map(
+      (item) => `
+        <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-200 text-sm">
+            ${item}
+        </span>
+    `,
+    )
+    .join("");
+
+  modal.classList.remove("hidden");
+  setTimeout(() => {
+    modal.classList.remove("opacity-0");
+    modalContent.classList.remove("scale-95");
+    modalContent.classList.add("scale-100");
+  }, 10);
+};
+
+window.closeInterest = () => {
+  modal.classList.add("opacity-0");
+  modalContent.classList.remove("scale-100");
+  modalContent.classList.add("scale-95");
+
+  setTimeout(() => {
+    modal.classList.add("hidden");
+  }, 300);
+};
