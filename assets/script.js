@@ -3,13 +3,17 @@ const projectsData = [
     title: "scrib",
     github: "https://github.com/kimaita/scrib",
     live: null,
-    thumbnail: "./assets/images/placeholder.jpg", // Replace with real path
+    thumbnail: "./assets/images/scrib/scrib-detail.png",
     screenshots: ["./assets/images/placeholder.jpg"],
     description:
-      "A tool designed to simplify note-taking and documentation for developers.",
+      "A web application for converting YouTube channels to audio podcasts.",
     techStack: [
       { name: "Python", icon: "fab fa-python" },
-      { name: "Django", icon: "fas fa-server" },
+      { name: "NodeJS", icon: "fab fa-node" },
+      { name: "ffmpeg", icon: "assets/icons/ffmpeg.svg" },
+      { name: "Svelte", icon: "assets/icons/svelte.svg" },
+      { name: "Cloudflare", icon: "fab fa-cloudflare" },
+      { name: "Google Cloud", icon: "assets/icons/googlecloud.svg" },
     ],
   },
   {
@@ -18,36 +22,52 @@ const projectsData = [
     live: null,
     thumbnail: "./assets/images/placeholder.jpg",
     screenshots: ["./assets/images/placeholder.jpg"],
-    description:
-      "Style transfer application using deep learning models to apply artistic styles to images.",
+    description: "A multi-user blogging platform.",
     techStack: [
       { name: "Python", icon: "fab fa-python" },
-      { name: "TensorFlow", icon: "fas fa-brain" },
+      { name: "FastAPI", icon: "./assets/icons/fastapi.svg" },
+      { name: "Postgres", icon: "./assets/icons/postgresql.svg" },
+      { name: "React", icon: "assets/icons/react.svg" },
     ],
   },
   {
-    title: "Word-a-Day",
-    github: "https://github.com/kimaita/word-a-day",
+    title: "Harambee",
+    github: "https://github.com/kimaita/harambee",
     live: null,
     thumbnail: "./assets/images/placeholder.jpg",
     screenshots: ["./assets/images/placeholder.jpg"],
-    description:
-      "An automated service that sends a new vocabulary word via SMS/Email daily.",
+    description: "Desktop Java application for managing donations.",
     techStack: [
-      { name: "Node.js", icon: "fab fa-node" },
-      { name: "AWS Lambda", icon: "fab fa-aws" },
+      { name: "Java", icon: "fab fa-java" },
+      { name: "Docker", icon: "fab fa-docker" },
+      { name: "Postgres", icon: "./assets/icons/postgresql.svg" },
+    ],
+  },
+  {
+    title: "Monies",
+    github: "https://github.com/kimaita/monies-v2",
+    live: null,
+    thumbnail: "./assets/images/placeholder.jpg",
+    screenshots: ["./assets/images/placeholder.jpg"],
+    description: "Android application for analysing M-PESA transactions.",
+    techStack: [
+      { name: "Kotlin", icon: "./assets/icons/kotlin.svg" },
+      { name: "Jetpack Compose", icon: "./assets/icons/jetpackcompose.svg" },
     ],
   },
 ];
 
 function createProjectCard(project, index) {
   const techChips = project.techStack
-    .map(
-      (tech) => `
-        <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium bg-white/10 text-azure border border-white/20">
-            <i class="${tech.icon}"></i> ${tech.name}
-        </span>
-    `
+    .map((tech) =>
+      `
+        <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs md:text-sm font-medium bg-white/10 text-azure border border-white/20">`
+        .concat(
+          tech.icon.startsWith("fab")
+            ? `<i class="${tech.icon}"></i>`
+            : `<img src="${tech.icon}" class="w-4 h-4 object-contain invert" />`,
+        )
+        .concat(`${tech.name}</span>`),
     )
     .join("");
 
@@ -63,8 +83,8 @@ function createProjectCard(project, index) {
         <div class="relative w-full md:w-2/5 h-48 md:h-auto group cursor-pointer overflow-hidden bg-black/50" 
              onclick="openLightbox('${project.thumbnail}')">
             <img src="${project.thumbnail}" alt="${
-    project.title
-  }" loading="lazy" 
+              project.title
+            }" loading="lazy" 
                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-80 group-hover:opacity-100">
             <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40">
                 <span class="text-white font-semibold"><i class="fas fa-expand mr-2"></i>View</span>
